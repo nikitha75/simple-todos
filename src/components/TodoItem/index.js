@@ -11,7 +11,7 @@ const TodoItem = ({
   handleChangeEditTodo,
 }) => (
   <li className="todo-item">
-    {editedTodo === id ? (
+    {editedTodo.includes(id) ? (
       <p>
         <input type="text" value={newTitle} onChange={handleChangeEditTodo} />
       </p>
@@ -20,7 +20,7 @@ const TodoItem = ({
     )}
     <div className="btn-group">
       <div>
-        {editedTodo === id ? (
+        {editedTodo.includes(id) ? (
           <button
             type="button"
             className="btn save-btn"
